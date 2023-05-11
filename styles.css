@@ -1,0 +1,34 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: pink;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+.kiwi-result {
+    display: none;
+}
+
+.strawberry-result {
+    display: none;
+}
+
+.mango-result {
+    display: none;
+}
+
+.pineapple-result {
+    display: none;
+}
+
+.tryagain {
+    display: none;
+    
+}
+
+.result {
+    display: none;
+}
