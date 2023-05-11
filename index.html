@@ -1,0 +1,114 @@
+<!DOCTYPE html> <html><head>
+        <title>gaby's unit 5 project</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: pink;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+.kiwi-result {
+    display: none;
+}
+
+.strawberry-result {
+    display: none;
+}
+
+.mango-result {
+    display: none;
+}
+
+.pineapple-result {
+    display: none;
+}
+
+.tryagain {
+    display: none;
+    
+}
+
+.result {
+    display: none;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>Which Fruit are You!</h1>
+            <img src="https://www.kroger.com/product/images/large/front/0004157306101" alt="bowl of fruit">
+        </div>
+        <div class="questions">
+            <h4>Do you perfer staying home or going out? Type your answer</h4>
+            <input class="inputOne">
+            <img src="https://thumbs.dreamstime.com/b/man-sitting-sofa-spend-home-stay-d-rendering-i-don-t-go-out-live-house-have-good-time-has-nothing-to-do-179343962.jpg" alt="house">
+            <h4>How many hours of sleep do you get a night? 1-8 hours?</h4>
+            <input class="inputTwo">
+            <img src="https://sph.umich.edu/pursuit/2020posts/2020images/Sleep101.jpg" alt="night">
+        </div>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+
+        <div class="kiwi-result">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour.jpg/800px-Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour.jpg" alt="kiwi">
+        </div>
+
+        <div class="strawberry-result">
+            <img src="https://www.thermofisher.com/blog/food/wp-content/uploads/sites/5/2015/08/single_strawberry__isolated_on_a_white_background.jpg" alt="strawberry">
+        </div>
+        <div class="mango-result">
+            <img src="https://images.heb.com/is/image/HEBGrocery/000321109?.fit=constrain,1&amp;wid=800&amp;hei=800&amp;fmt=jpg&amp;qlt=85,0&amp;resMode=sharp2&amp;op_usm=1.75,0.3,2,0" alt="mango">
+        </div>
+
+        <div class="pineapple-result">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUlCVJgqnbeCd_fwVfX7SsZhgCghq7MrAv7A&amp;usqp=CAU" alt="pineapple">
+        </div>
+
+        <button class="buttonOne"> Results
+        </button>
+        <div>
+            <img class="tryagain" src="https://previews.123rf.com/images/chrisdorney/chrisdorney1501/chrisdorney150100067/35808541-TRY-AGAIN-red-Rubber-Stamp-over-a-white-background--Stock-Photo.jpg">
+        </div>
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var ButtonOne = document.querySelector(".buttonOne");
+var Kiwiimage = document.querySelector(".kiwi-result");
+var strawberryimage = document.querySelector(".strawberry-result");
+var mangoimage = document.querySelector(".mango-result");
+var pineappleimage = document.querySelector(".pineapple-result");
+var tryagain = document.querySelector(".tryagain");
+var results = document.querySelector(".result");
+
+ButtonOne.onclick = function () {
+  var inputOne = document.querySelector(".inputOne").value;
+  var inputTwo = document.querySelector(".inputTwo").value;
+
+  if (inputTwo >= 1 && inputTwo <= 4 && inputOne === "staying home") {
+    console.log("strawberry");
+    document.querySelector(".result").innerHTML = "You are a Strawberry!";
+    strawberryimage.style.display = "block";
+  } else if (inputTwo >= 5 && inputTwo <= 8 && inputOne === "staying home") {
+    console.log("kiwi");
+    document.querySelector(".result").innerHTML = "You are a Kiwi!";
+    Kiwiimage.style.display = "block";
+  } else if (inputTwo >= 1 && inputTwo <= 4 && inputOne === "going out") {
+    console.log("mango");
+    document.querySelector(".result").innerHTML = "You are a Mango!";
+    mangoimage.style.display = "block";
+  } else if (inputTwo >= 5 && inputTwo <= 8 && inputOne === "going out") {
+    console.log("pineapple");
+    document.querySelector(".result").innerHTML = " You are a Pineapple!";
+    pineappleimage.style.display = "block";
+  } else {
+    results.style.display = "block";
+    results.innerHTML = "Try AGAIN- your response does not match the possible answers";
+    tryagain.style.display = "block";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIkJ1dHRvbk9uZSIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsIktpd2lpbWFnZSIsInN0cmF3YmVycnlpbWFnZSIsIm1hbmdvaW1hZ2UiLCJwaW5lYXBwbGVpbWFnZSIsInRyeWFnYWluIiwicmVzdWx0cyIsIm9uY2xpY2siLCJpbnB1dE9uZSIsInZhbHVlIiwiaW5wdXRUd28iLCJjb25zb2xlIiwibG9nIiwiaW5uZXJIVE1MIiwic3R5bGUiLCJkaXNwbGF5Il0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxTQUFTLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixDQUFoQjtBQUNBLElBQUlDLFNBQVMsR0FBR0YsUUFBUSxDQUFDQyxhQUFULENBQXVCLGNBQXZCLENBQWhCO0FBQ0EsSUFBSUUsZUFBZSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsb0JBQXZCLENBQXRCO0FBQ0EsSUFBSUcsVUFBVSxHQUFHSixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsZUFBdkIsQ0FBakI7QUFDQSxJQUFJSSxjQUFjLEdBQUdMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixtQkFBdkIsQ0FBckI7QUFDQSxJQUFJSyxRQUFRLEdBQUdOLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixXQUF2QixDQUFmO0FBQ0EsSUFBSU0sT0FBTyxHQUFHUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBZDs7QUFDQUYsU0FBUyxDQUFDUyxPQUFWLEdBQW9CLFlBQVc7QUFDM0IsTUFBSUMsUUFBUSxHQUFHVCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsV0FBdkIsRUFBb0NTLEtBQW5EO0FBQ0EsTUFBSUMsUUFBUSxHQUFHWCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsV0FBdkIsRUFBb0NTLEtBQW5EOztBQUNBLE1BQUlDLFFBQVEsSUFBSSxDQUFaLElBQWlCQSxRQUFRLElBQUksQ0FBN0IsSUFBa0NGLFFBQVEsS0FBSyxjQUFuRCxFQUFtRTtBQUMvREcsSUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksWUFBWjtBQUNBYixJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NhLFNBQWxDLEdBQThDLHVCQUE5QztBQUNBWCxJQUFBQSxlQUFlLENBQUNZLEtBQWhCLENBQXNCQyxPQUF0QixHQUFnQyxPQUFoQztBQUNILEdBSkQsTUFJTyxJQUFJTCxRQUFRLElBQUksQ0FBWixJQUFpQkEsUUFBUSxJQUFJLENBQTdCLElBQWtDRixRQUFRLEtBQUssY0FBbkQsRUFBbUU7QUFDdEVHLElBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLE1BQVo7QUFDQWIsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDYSxTQUFsQyxHQUE4QyxpQkFBOUM7QUFDQVosSUFBQUEsU0FBUyxDQUFDYSxLQUFWLENBQWdCQyxPQUFoQixHQUEwQixPQUExQjtBQUVILEdBTE0sTUFLQSxJQUFJTCxRQUFRLElBQUksQ0FBWixJQUFpQkEsUUFBUSxJQUFJLENBQTdCLElBQWtDRixRQUFRLEtBQUssV0FBbkQsRUFBZ0U7QUFDbkVHLElBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLE9BQVo7QUFDQWIsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDYSxTQUFsQyxHQUE4QyxrQkFBOUM7QUFDQVYsSUFBQUEsVUFBVSxDQUFDVyxLQUFYLENBQWlCQyxPQUFqQixHQUEyQixPQUEzQjtBQUNILEdBSk0sTUFJQSxJQUFJTCxRQUFRLElBQUksQ0FBWixJQUFpQkEsUUFBUSxJQUFJLENBQTdCLElBQWtDRixRQUFRLEtBQUssV0FBbkQsRUFBZ0U7QUFDdkVHLElBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLFdBQVo7QUFDSWIsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDYSxTQUFsQyxHQUE4Qyx1QkFBOUM7QUFDQVQsSUFBQUEsY0FBYyxDQUFDVSxLQUFmLENBQXFCQyxPQUFyQixHQUErQixPQUEvQjtBQUVILEdBTE0sTUFLQTtBQUNIVCxJQUFBQSxPQUFPLENBQUNRLEtBQVIsQ0FBY0MsT0FBZCxHQUF3QixPQUF4QjtBQUNBVCxJQUFBQSxPQUFPLENBQUNPLFNBQVIsR0FBb0IsOERBQXBCO0FBQ0FSLElBQUFBLFFBQVEsQ0FBQ1MsS0FBVCxDQUFlQyxPQUFmLEdBQXlCLE9BQXpCO0FBQ0g7QUFDSixDQTFCRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBCdXR0b25PbmUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmJ1dHRvbk9uZVwiKTtcbmxldCBLaXdpaW1hZ2UgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmtpd2ktcmVzdWx0XCIpO1xubGV0IHN0cmF3YmVycnlpbWFnZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc3RyYXdiZXJyeS1yZXN1bHRcIik7XG5sZXQgbWFuZ29pbWFnZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubWFuZ28tcmVzdWx0XCIpO1xubGV0IHBpbmVhcHBsZWltYWdlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5waW5lYXBwbGUtcmVzdWx0XCIpO1xubGV0IHRyeWFnYWluID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi50cnlhZ2FpblwiKTtcbmxldCByZXN1bHRzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIik7XG5CdXR0b25PbmUub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICAgIGxldCBpbnB1dE9uZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuaW5wdXRPbmVcIikudmFsdWU7XG4gICAgbGV0IGlucHV0VHdvID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5pbnB1dFR3b1wiKS52YWx1ZTtcbiAgICBpZiAoaW5wdXRUd28gPj0gMSAmJiBpbnB1dFR3byA8PSA0ICYmIGlucHV0T25lID09PSBcInN0YXlpbmcgaG9tZVwiKSB7XG4gICAgICAgIGNvbnNvbGUubG9nKFwic3RyYXdiZXJyeVwiKTtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MID0gXCJZb3UgYXJlIGEgU3RyYXdiZXJyeSFcIjtcbiAgICAgICAgc3RyYXdiZXJyeWltYWdlLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfSBlbHNlIGlmIChpbnB1dFR3byA+PSA1ICYmIGlucHV0VHdvIDw9IDggJiYgaW5wdXRPbmUgPT09IFwic3RheWluZyBob21lXCIpIHtcbiAgICAgICAgY29uc29sZS5sb2coXCJraXdpXCIpO1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUwgPSBcIllvdSBhcmUgYSBLaXdpIVwiO1xuICAgICAgICBLaXdpaW1hZ2Uuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcblxuICAgIH0gZWxzZSBpZiAoaW5wdXRUd28gPj0gMSAmJiBpbnB1dFR3byA8PSA0ICYmIGlucHV0T25lID09PSBcImdvaW5nIG91dFwiKSB7XG4gICAgICAgIGNvbnNvbGUubG9nKFwibWFuZ29cIik7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTCA9IFwiWW91IGFyZSBhIE1hbmdvIVwiO1xuICAgICAgICBtYW5nb2ltYWdlLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfSBlbHNlIGlmIChpbnB1dFR3byA+PSA1ICYmIGlucHV0VHdvIDw9IDggJiYgaW5wdXRPbmUgPT09IFwiZ29pbmcgb3V0XCIpIHtcbiAgICBjb25zb2xlLmxvZyhcInBpbmVhcHBsZVwiKTtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MID0gXCIgWW91IGFyZSBhIFBpbmVhcHBsZSFcIjtcbiAgICAgICAgcGluZWFwcGxlaW1hZ2Uuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICAgIFxuICAgIH0gZWxzZSB7XG4gICAgICAgIHJlc3VsdHMuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICAgICAgcmVzdWx0cy5pbm5lckhUTUwgPSBcIlRyeSBBR0FJTi0geW91ciByZXNwb25zZSBkb2VzIG5vdCBtYXRjaCB0aGUgcG9zc2libGUgYW5zd2Vyc1wiO1xuICAgICAgICB0cnlhZ2Fpbi5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH1cbn07Il19</script></body></html>
